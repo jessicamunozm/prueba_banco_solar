@@ -1,0 +1,68 @@
+:root {
+    --negro: #000;
+    --amarillo: #ffc803;
+    --gris: #d3d3d3;
+    --blanco: #ffffff;
+}
+
+body {
+background-color: var(--negro);
+font-family: quicksand;
+}
+
+/* NAVBAR */
+
+nav {
+    font-weight: bolder;
+    background-color: var(--amarillo);
+}
+
+nav img {
+    margin: 1rem;
+}
+
+#dropdownstyle {
+    background-color: var(--amarillo);
+    font-weight: bolder;
+}
+
+#dropdown {
+    background-color: var(--amarillo);
+}
+/* FIN NAVBAR */
+.btn {
+    background-color: var(--amarillo);
+    color: var(--negro);
+}
+
+/* FOOTER */
+
+footer {
+    height: 7rem;
+    background-color: var(--gris);
+    margin-top: 7%;
+    text-align: center;
+}
+
+footer i {
+    font-size: xx-large;
+    color: var(--negro);
+justify-content: center;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+
+#footer {
+    background-color: var(--amarillo);
+}
+
+h5 {
+    padding-top: 1rem;
+    color: var(--negro);
+    font-weight: bold;
+}
+
+h6 {
+    color:var(--negro);
+    padding-bottom: 1rem;
+}
