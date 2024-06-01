@@ -1,6 +1,6 @@
 import express from 'express'
 import path from "path"
-import {addUser, getUser, editUser} from '../queries/consultas.js'
+import {addUser, getUser, editUser, deleteUser} from '../queries/consultas.js'
 
 const __dirname = import.meta.dirname
 const router = express.Router()
@@ -40,8 +40,18 @@ router.put('/usuario', async(req,res) => {
     }
 })
 
+router.delete('/usuario', async(req,res) => {
+    try{
+    const {id}=req.query
+    const result = await deleteUser(id)
+    res.status(201).send(result)
+    }catch(err){
+        send(error.message)
+    }
+})
+
 router.get('*', (req,res) => {
     res.send(' no se consigue la ruta')
 })
 
-export default router   
+export default router

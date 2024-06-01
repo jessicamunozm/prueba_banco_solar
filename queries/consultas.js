@@ -40,4 +40,18 @@ const editUser = async(nombre, balance, id) => {
         (console.log(error.message))
         }}
 
-export {addUser, getUser, editUser}
+const deleteUser = async(id) => {
+    try{ 
+        const consulta = {
+        text: 'delete from usuarios where id = $1 returning *',
+        values: [id]
+        }
+        const result = await pool.query(consulta)
+        return result.rows
+        
+        }catch(error) {
+        (console.log(error.message))
+        }}
+
+
+export {addUser, getUser, editUser, deleteUser}
